@@ -45,7 +45,7 @@ error_reporting(0);
         <div class="row">
           <div class="col-md-7 col-md-push-5">
             <div class="banner_content ">
-              <h1>EditSelamat Datang Di Website Azha Seserahan Palopo</h1>
+              <h1>Edit adiSelamat Datang Di Website Azha Seserahan Palopo</h1>
               <!-- <p>Azha Seserahan Kota Palopo</p> -->
               <p>
                 Toko Azha Seserahan Adalah tempat seserahan istimewa yang ada di palopo dengan Koleksi elegan, harga terjangkau, dan pelayanan ramah. Temukan keindahan setiap detail di sini.</p>
