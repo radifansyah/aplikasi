@@ -27,7 +27,7 @@ error_reporting(0);
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="assets/images/favicon-icon/uncp.png">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
@@ -39,7 +39,7 @@ error_reporting(0);
   <!-- /Header -->
 
   <!-- Banners -->
-  <section id="banner" class="banner-section" style="background-image: url(assets/images/a.jpg);">
+  <section id="banner" class="banner-section" style="background-image: url(assets/images/gambar\ utamakuuuuuuu.png);">
     <div class=" container">
       <div class="div_zindex">
         <div class="row">
@@ -48,7 +48,7 @@ error_reporting(0);
               <h1>Selamat Datang Di Website Azha Seserahan Palopo</h1>
               <!-- <p>Azha Seserahan Kota Palopo</p> -->
               <p>
-                Toko Azha Seserahan Adalah tempat seserahan istimewa yang ada di palopo dengan Koleksi elegan, harga terjangkau, dan pelayanan ramah. Temukan keindahan setiap detail di sini.</p>
+                Tempat seserahan istimewa yang ada di palopo dengan Koleksi elegan, harga terjangkau, dan pelayanan ramah Temukan keindahan setiap detail di sini.</p>
               <a href="produk.php" class="btn">Lihat Produk <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
             </div>
           </div>
@@ -67,7 +67,7 @@ error_reporting(0);
         <!-- <p>Produk Di Jual : Sovenir Dan Produk Di Sewakan : Dekorasi, Erang-Erang, Baju Bodo </p> -->
         <!-- <p>Anda akan dapat sepenuhnya menikmati liburan dan perjalanan Anda! Masalah apapun? Tim kami yang bersemangat akan dengan senang hati membantu Anda!! Tidak perlu membuang waktu selama liburan Anda untuk menemukan titik persewaan di tempat! Tidak ada kendala bahasa, terima kasih kepada tim multibahasa kami! Dengan harga yang sama Anda akan membayar di tempat! Kami memiliki sepeda terbaik dengan penawaran terbaik</p> -->
         <p>
-          Selamat datang di Toko Azha Seserahan, tempat penyewaan dekorasi, erang-erang, dan baju bodo yang elegan. Temukan sovenir unik untuk setiap momen berharga. Rencanakan acara Anda dengan kemewahan dan kreativitas tanpa repot pengadaan. Jelajahi koleksi kami untuk pengalaman berbelanja yang inspiratif dan tak terlupakan.</p>
+          Temukan sovenir unik untuk setiap momen berharga. Rencanakan acara Anda dengan kemewahan dan kreativitas tanpa repot pengadaan. Jelajahi koleksi kami untuk pengalaman berbelanja yang inspiratif dan tak terlupakan.</p>
 
       </div>
       <div class="row">
@@ -100,17 +100,19 @@ error_reporting(0);
                   <div class="recent-car-list">
                     <div class="car-info-box"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image"></a>
                       <ul>
-                        <li><i class="fa fa-calendar" aria-hidden="true"></i>
+                        <li>
+                          <!-- <li><i class="fa fa-calendar" aria-hidden="true"></i> -->
                           <div class="warna" style="display: inline; background-color: red; padding: 4px ;"><?php echo htmlentities($result->Penjualan); ?></div>
                         </li>
                       </ul>
                     </div>
                     <div class="car-title-m">
-                      <h6 style="font-size: 14px;"><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?>, <?php echo htmlentities($result->Namaproduk); ?></a></h6>
+                      <!-- <h6 style="font-size: 14px;"><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?></a></h6> -->
+                      <h6 style="font-size: 14px;"><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> <?php echo htmlentities($result->Namaproduk); ?></a></h6>
                       <span style="font-size: 14px;" class="price"> Rp. <?php echo htmlentities($result->Harga); ?></span>
                     </div>
                     <div class="inventory_info_m">
-                      <p><?php echo substr($result->Deskripsi, 0, 70); ?></p>
+                      <p><?php echo substr($result->Deskripsi, 0, 100); ?></p>
                     </div>
                   </div>
                 </div>
@@ -168,7 +170,7 @@ error_reporting(0);
 
 
   <!--Testimonial -->
-  <section class="section-padding testimonial-section parallex-bg" style="background-image: url(assets/images/b.jpeg);">
+  <section class="section-padding testimonial-section parallex-bg" style="background-image: url(assets/images/background\ bawah.jpeg);">
     <div class="container div_zindex">
       <div class="section-header white-text text-center">
         <h2>Kami Puas <span> Review Pelanggan</span></h2>

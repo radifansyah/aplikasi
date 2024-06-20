@@ -47,7 +47,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 		// move_uploaded_file($_FILES["img15"]["tmp_name"], "img/produk/" . $_FILES["img15"]["name"]);
 		// move_uploaded_file($_FILES["img16"]["tmp_name"], "img/produk/" . $_FILES["img16"]["name"]);
 
-		$sql = "INSERT INTO tblproduk(Namaproduk,Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10) VALUES(:namaproduk,:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10)";
+		// $sql = "INSERT INTO tblproduk(Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10) VALUES(:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10)";
+		$sql = "INSERT INTO tblproduk(Namaproduk,Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10) VALUES(:namaproduk,:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10)";/* di no aktifkan */
 		// $sql = "INSERT INTO tblproduk(Namaproduk,Kategori,Deskripsi,Harga,Penjualan,Vimage1,Vimage2,Vimage3,Vimage4,Vimage5,Vimage6,Vimage7,Vimage8,Vimage9,Vimage10,Vimage11,Vimage12,Vimage13,Vimage14,Vimage15,Vimage16) VALUES(:namaproduk,:kategori,:deskripsi,:harga,:penjualan,:vimage1,:vimage2,:vimage3,:vimage4,:vimage5,:vimage6,:vimage7,:vimage8,:vimage9,:vimage10,:vimage11,:vimage12,:vimage13,:vimage14,:vimage15,:vimage16)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':namaproduk', $namaproduk, PDO::PARAM_STR);
@@ -156,9 +157,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<div class="panel-body">
 											<form method="post" class="form-horizontal" enctype="multipart/form-data">
 												<div class="form-group">
-													<label class="col-sm-2 control-label">Nama Produk<span style="color:red">*</span></label>
+													<label class="col-sm-2 control-label">Jenis Produk<span></span></label>
+													<!-- <label class="col-sm-2 control-label">Nama Produk<span style="color:red">*</span></label> -->
 													<div class="col-sm-4">
-														<input type="text" name="namaproduk" class="form-control" required>
+														<input type="text" name="namaproduk" class="form-control">
+														<!-- <input type="text" name="namaproduk" class="form-control" required> -->
 													</div>
 													<label class="col-sm-2 control-label">Kategori<span style="color:red">*</span></label>
 													<div class="col-sm-4">
@@ -191,7 +194,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<div class="form-group">
 													<label class="col-sm-2 control-label">Harga<span style="color:red">*</span></label>
 													<div class="col-sm-4">
-														<input type="text" name="harga" placeholder="Contoh dijual: 10.000/disewa: 100.000/hari" class="form-control" required>
+														<input type="text" name="harga" placeholder="" class="form-control" required>
 													</div>
 													<label class="col-sm-2 control-label">Penjualan<span style="color:red">*</span></label>
 													<div class="col-sm-2">

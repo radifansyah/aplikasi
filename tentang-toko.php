@@ -34,8 +34,9 @@ include('includes/config.php');
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
+
     <style>
         .errorWrap {
             padding: 10px;
@@ -68,7 +69,7 @@ include('includes/config.php');
     <!-- /Header -->
 
     <!--Page Header-->
-    <section class="page-header contactus_page" style="background-image: url(assets/images/b.jpeg);">
+    <section class="page-header contactus_page" style="background-image: url(assets/images/headerku.png);">
         <div class="container">
             <div class="page-header_wrap">
                 <div class="page-heading">
@@ -121,16 +122,29 @@ include('includes/config.php');
                         } ?>
                     </div> -->
                     <!-- <div class="social-follow"> -->
-                    <h5>Toko Azha Seserahan Palopo</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi amet nemo doloribus nam, enim, vero vitae dolore commodi nostrum doloremque nesciunt minus! Harum quas quibusdam facilis possimus incidunt aliquam quis molestiae est officia nulla consequatur pariatur qui voluptate cumque dolorem quisquam quae totam, iusto architecto iure ipsam ad? Ab, nihil.</p>
-                    <h5>Media Sosial</h5>
+                    <h6>Toko Azha Seserahan Palopo</h6>
+                    <p style="text-align: justify;">Toko Azha Seserahan Palopo adalah destinasi utama bagi mereka yang mencari perlengkapan seserahan yang elegan dan berkelas di Palopo. Didirikan dengan semangat untuk memberikan layanan terbaik kepada para pelanggan, toko ini telah menjadi tempat yang populer bagi pasangan yang akan menikah dan keluarga yang ingin memberikan hadiah istimewa dalam rangkaian pernikahan.
+
+                        Dengan kombinasi antara keahlian tangan terampil dan inovasi desain moderen, Toko Azha Seserahan Palopo menawarkan beragam produk seserahan yang berkualitas tinggi.
+
+                        Selain itu, pelayanan yang ramah dan profesional adalah salah satu ciri khas dari Toko Azha Seserahan Palopo. Tim yang berpengalaman dan berpengetahuan luas di bidang pernikahan siap membantu setiap pelanggan dalam menemukan seserahan yang sesuai dengan kebutuhan dan budget mereka.
+
+                    </p>
+                    <!-- <p>Toko Azha Seserahan Palopo adalah destinasi utama bagi mereka yang mencari perlengkapan seserahan yang elegan dan berkelas di Palopo. Didirikan dengan semangat untuk memberikan layanan terbaik kepada para pelanggan, toko ini telah menjadi tempat yang populer bagi pasangan yang akan menikah dan keluarga yang ingin memberikan hadiah istimewa dalam rangkaian pernikahan.
+
+                        Dengan kombinasi antara keahlian tangan terampil dan inovasi desain modern, Toko Azha Seserahan Palopo menawarkan beragam produk seserahan yang berkualitas tinggi. Mulai dari rangkaian perhiasan tradisional hingga koleksi peralatan rumah tangga yang elegan, setiap produk di toko ini dipilih dengan teliti untuk memastikan kepuasan pelanggan yang tinggi.
+
+                        Selain itu, pelayanan yang ramah dan profesional adalah salah satu ciri khas dari Toko Azha Seserahan Palopo. Tim yang berpengalaman dan berpengetahuan luas di bidang pernikahan siap membantu setiap pelanggan dalam menemukan seserahan yang sesuai dengan kebutuhan dan budget mereka.
+
+                    </p> -->
+                    <h6>Media Sosial</h6>
                     <ul>
-                        <li><a href="#"><i class="fa-brands fa-square-facebook fa-bounce" aria-hidden="true"></i>Facebook</a></li>
-                        <li><a href="#"> <i class="fa-brands fa-square-whatsapp fa-bounce"></i>Whatshapp</a></li>
-                        <li><a href="#"><i class="fa-brands fa-square-instagram fa-bounce" aria-hidden="true"></i>Instagram</a></li>
+                        <li style="list-style: none; color: black;"><a style=" color: black;" href="https://www.facebook.com/icha.pmds"><i class="fa-brands fa-square-facebook " aria-hidden="true"></i>Facebook</a></li>
+                        <li style="list-style: none; color: black;"><a style=" color: black;" href="https://wa.me/6208135622001"> <i class="fa-brands fa-square-whatsapp "></i>No Telpon/Whatshapp</a></li>
+                        <li style="list-style: none; color: black;"><a style=" color: black;" href="https://www.instagram.com/azha_seserahanplp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-square-instagram " aria-hidden="true"></i>Instagram</a></li>
                         <!-- <li><a href="#"><i class="fa fa-google-plus-square " aria-hidden="true"></i></a></li> -->
                         <!-- <i class="fa-brands fa-tiktok fa-bounce"></i> -->
-                        <li><a href="#"><i class="fa-brands fa-tiktok fa-bounce" aria-hidden="true"></i>Tiktok</a></li>
+                        <!-- <li><a href="#"><i class="fa-brands fa-tiktok fa-bounce" aria-hidden="true"></i>Tiktok</a></li> -->
                     </ul>
 
                 </div>

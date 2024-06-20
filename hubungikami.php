@@ -53,7 +53,7 @@ if (isset($_POST['send'])) {
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
   <style>
     .errorWrap {
@@ -87,7 +87,7 @@ if (isset($_POST['send'])) {
   <!-- /Header -->
 
   <!--Page Header-->
-  <section class="page-header contactus_page" style="background-image: url(assets/images/b.jpeg);">
+  <section class="page-header contactus_page" style="background-image: url(assets/images/headerku.png);">
     <div class="container">
       <div class="page-header_wrap">
         <div class="page-heading">
@@ -121,7 +121,7 @@ if (isset($_POST['send'])) {
                 <input type="email" name="email" class="form-control white_bg" id="emailaddress" required>
               </div>
               <div class="form-group">
-                <label class="control-label">No Telpon <span>*</span></label>
+                <label class="control-label">No Telpon/WhatsApp <span>*</span></label>
                 <input type="text" name="contactno" class="form-control white_bg" id="phonenumber" required>
               </div>
               <div class="form-group">

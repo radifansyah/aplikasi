@@ -34,7 +34,7 @@ error_reporting(0);
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
@@ -49,7 +49,7 @@ error_reporting(0);
   <!-- /Header -->
 
   <!--Page Header-->
-  <section class="page-header listing_page" style="background-image: url(assets/images/b.jpeg);">
+  <section class="page-header listing_page" style="background-image: url(assets/images/headerku.png);">
     <div class="container">
       <div class="page-header_wrap">
         <div class="page-heading">
@@ -85,56 +85,61 @@ error_reporting(0);
               <p><span><?php echo htmlentities($cnt); ?> Produk</span></p>
             </div>
           </div>
-
-          <?php $sql = "SELECT tblproduk.*,tblkategori.namaKategori,tblkategori.id as bid  from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
-          $query = $dbh->prepare($sql);
-          $query->execute();
-          $results = $query->fetchAll(PDO::FETCH_OBJ);
-          $cnt = 1;
-          if ($query->rowCount() > 0) {
-            foreach ($results as $result) {  ?>
-              <div class="product-listing-m gray-bg">
-                <div class="product-listing-img"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="Image" /> </a>
+          <div class="respon">
+            <?php $sql = "SELECT tblproduk.*,tblkategori.namaKategori,tblkategori.id as bid  from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
+            $query = $dbh->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $cnt = 1;
+            if ($query->rowCount() > 0) {
+              foreach ($results as $result) {  ?>
+                <div class="product-listing-m gray-bg">
+                  <div class="product-listing-img"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="Image" /> </a>
+                  </div>
+                  <div class="product-listing-content">
+                    <!-- <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> </a></h5> -->
+                    <h6><a style="color: black;" href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> <?php echo htmlentities($result->Namaproduk); ?></a></h6>
+                    <p class="list-price">Rp. <?php echo htmlentities($result->Harga); ?></p>
+                    <ul>
+                      <li><?php echo htmlentities($result->Penjualan); ?></li>
+                      <!-- <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Penjualan); ?></li> -->
+                    </ul>
+                    <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">Lihat Detail <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                  </div>
                 </div>
-                <div class="product-listing-content">
-                  <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a></h5>
-                  <p class="list-price">Rp. <?php echo htmlentities($result->Harga); ?></p>
-                  <ul>
-                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Penjualan); ?></li>
-                  </ul>
-                  <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">Lihat Detail <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
-                </div>
-              </div>
-          <?php }
-          } ?>
+            <?php }
+            } ?>
+          </div>
         </div>
 
         <!--Side-Bar-->
         <aside class="col-md-3 col-md-pull-9">
-          <div class="sidebar_widget">
-            <div class="widget_heading">
-              <h5><i class="fa fa-filter" aria-hidden="true"></i> Cari Kategori </h5>
-            </div>
-            <div class="sidebar_filter">
-              <form action="cari.php" method="post">
-                <div class="form-group select">
-                  <select class="form-control" name="brand">
-                    <!-- <option>Select Brand</option> -->
+          <div class="respondua">
+            <div class="sidebar_widget">
+              <div class="widget_heading">
+                <h6><i class="fa fa-filter" aria-hidden="true"></i> Cari Kategori </h6>
+              </div>
+              <div class="sidebar_filter">
+                <form action="cari.php" method="post">
+                  <div class="form-group select">
+                    <select class="form-control" name="brand">
+                      <option>Pilih</option>
+                      <!-- <optgroup label="Makanan"> -->
 
-                    <?php $sql = "SELECT * from  tblkategori ";
-                    $query = $dbh->prepare($sql);
-                    $query->execute();
-                    $results = $query->fetchAll(PDO::FETCH_OBJ);
-                    $cnt = 1;
-                    if ($query->rowCount() > 0) {
-                      foreach ($results as $result) {       ?>
-                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?></option>
-                    <?php }
-                    } ?>
+                      <?php $sql = "SELECT * from  tblkategori ";
+                      $query = $dbh->prepare($sql);
+                      $query->execute();
+                      $results = $query->fetchAll(PDO::FETCH_OBJ);
+                      $cnt = 1;
+                      if ($query->rowCount() > 0) {
+                        foreach ($results as $result) {       ?>
+                          <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?></option>
+                      <?php }
+                      } ?>
 
-                  </select>
-                </div>
-                <!-- <div class="form-group select">
+                    </select>
+                  </div>
+                  <!-- <div class="form-group select">
                   <select class="form-control" name="fueltype">
                     <option>Select Fuel Type</option>
                     <option value="Petrol">Petrol</option>
@@ -143,16 +148,16 @@ error_reporting(0);
                   </select>
                 </div> -->
 
-                <div class="form-group">
-                  <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Cari</button>
-                </div>
-              </form>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Cari</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-
           <div class="sidebar_widget">
             <div class="widget_heading">
-              <h5></i>Kategori/Produk Tersedia</h5>
+              <h6></i>Kategori/Produk Tersedia</h5>
 
             </div>
             <div class="recent_addedcars">
@@ -167,7 +172,7 @@ error_reporting(0);
 
                     <li class="gray-bg">
                       <div class="recent_post_img"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
-                      <div class="recent_post_title"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a>
+                      <div class="recent_post_title"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> <?php echo htmlentities($result->Namaproduk); ?></a>
                         <p class="widget_price">Rp. <?php echo htmlentities($result->Harga); ?> </p>
                       </div>
                     </li>

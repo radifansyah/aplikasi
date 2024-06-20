@@ -91,7 +91,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Nama Kategori</th>
+												<th>Kategori</th>
 												<th>Nama Produk</th>
 												<th>Harga</th>
 												<th>Penjualan</th>

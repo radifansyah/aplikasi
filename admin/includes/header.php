@@ -1,5 +1,6 @@
 <div class="brand clearfix">
-	<a href="dashboard.php" style="font-size: 20px;">
+	<a href="logout.php" style="font-size: 20px;">
+		<!-- <a href="dashboard.php" style="font-size: 20px;"> -->
 		<h3 style="display: inline-block; margin-left: 20px; color: white;">Toko Azha Seserahan Palopo</h3>
 	</a>
 	<span class="menu-btn"><i class="fa fa-bars"></i></span>

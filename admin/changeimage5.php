@@ -131,6 +131,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<div class="col-sm-8 col-sm-offset-4">
 
 														<button class="btn btn-primary" name="update" type="submit">Update</button>
+														<button class="btn btn-default" type="button" onclick="history.back();">Kembali</button>
 													</div>
 												</div>
 

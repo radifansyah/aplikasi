@@ -3,28 +3,28 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3 col-md-3 ">
-          <h4 class="judul" style="margin-top: 10px;">Azha Seserahan Palopo</h4>
+          <h4 class="judul" style="margin-top: 10px; color: red;">Azha Seserahan Palopo</h4>
         </div>
         <div class="col-sm-9 col-md-9">
           <div class="header_info">
             <div class="header_widgets">
-              <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">Email : </p>
-              <a href="mailto:info@example.com">azhaseserahanpalopo@gmail.com</a>
+              <div class="circle_icon"> <i class="fa-brands fa-instagram"></i></div>
+              <p class="uppercase_text">Instagram : </p>
+              <a href="https://www.instagram.com/azha_seserahanplp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Azhaseserahanplp</a>
             </div>
             <div class="header_widgets">
-              <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+              <div class="circle_icon"> <i class="fa-solid fa-phone"></i> </div>
               <p class="uppercase_text">No Telpon : </p>
-              <a href="tel:+639079373999">08129373999</a>
+              <a href="tel:+08135622001">08135622001</a>
             </div>
             <div class="social-follow">
               <ul>
-                <li><a href="#"><i class="fa-brands fa-square-facebook fa-bounce" aria-hidden="true"></i></a></li>
-                <li><a href="#"> <i class="fa-brands fa-square-whatsapp fa-bounce"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-square-instagram fa-bounce" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/icha.pmds"><i class="fa-brands fa-square-facebook fa-bounce" aria-hidden="true"></i></a></li>
+                <li><a href="https://wa.me/6208135622001"> <i class="fa-brands fa-square-whatsapp fa-bounce"></i></a></li>
+                <li><a href="https://www.instagram.com/azha_seserahanplp?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-square-instagram fa-bounce" aria-hidden="true"></i></a></li>
                 <!-- <li><a href="#"><i class="fa fa-google-plus-square " aria-hidden="true"></i></a></li> -->
                 <!-- <i class="fa-brands fa-tiktok fa-bounce"></i> -->
-                <li><a href="#"><i class="fa-brands fa-tiktok fa-bounce" aria-hidden="true"></i></a></li>
+                <!-- <li><a href="#"><i class="fa-brands fa-tiktok fa-bounce" aria-hidden="true"></i></a></li> -->
               </ul>
             </div>
             <?php if (strlen($_SESSION['login']) == 0) {
@@ -72,7 +72,7 @@
                   <!-- <li><a href="my-testimonials.php">My Testimonial</a></li> -->
                   <li><a href="logout.php">Logout</a></li>
                 <?php } else { ?>
-                  <li>Silahkan Login Terlebih Dahulu</li>
+                  <!-- <li>Silahkan Login Terlebih Dahulu</li> -->
                   <!-- <li><a href="#loginform" data-toggle="modal" data-dismiss="modal">Profile Settings</a></li> -->
                   <!-- <li><a href="#loginform" data-toggle="modal" data-dismiss="modal">Update Password</a></li> -->
                   <!-- <li><a href="#loginform" data-toggle="modal" data-dismiss="modal">Pesanan Saya</a></li> -->

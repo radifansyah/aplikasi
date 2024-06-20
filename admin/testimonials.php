@@ -14,7 +14,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':eid', $eid, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Testimonial Successfully Inacrive";
+		$msg = "Testimoni Berhasil Menonaktifkan";
 	}
 
 
@@ -28,7 +28,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':aeid', $aeid, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Testimonial Successfully Active";
+		$msg = "Testimoni Berhasil Aktif";
 	}
 
 
@@ -141,10 +141,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->Testimoni); ?></td>
 														<td><?php echo htmlentities($result->Tanggalkirim); ?></td>
 														<td><?php if ($result->Status == "" || $result->Status == 0) {
-															?><a class="btn-primary" href="testimonials.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Active')"> Inactive<br><a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Hapus</a></a>
+																?><a class="btn-primary" href="testimonials.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda ingin menjadi Aktif')"> Inactive<br><a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Delete</a></a>
 															<?php } else { ?>
 
-																<a class="btn-primary" href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to Inactive')"> Active</a>
+																<a class="btn-primary" href="testimonials.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda ingin menjadi Tidak Aktif')"> Active</a>
 																<a class="btn-primary" href="testimonials.php?del=<?php echo $result->id; ?>" onclick="return confirm('Do you want to delete');"></i>Delete</a>
 														</td>
 

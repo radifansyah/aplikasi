@@ -34,10 +34,12 @@ if (isset($_POST['login'])) {
             <div class="col-md-12 col-sm-6">
               <form method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Masukkan Email ">
+                  <label for="">Masukkan Email*</label>
+                  <input type="email" class="form-control" name="email" placeholder=" ">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Masukkan Password ">
+                  <label for="">Masukkan Password*</label>
+                  <input type="password" class="form-control" name="password" placeholder=" ">
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="remember">

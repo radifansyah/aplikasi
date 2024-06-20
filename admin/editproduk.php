@@ -16,6 +16,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$id = intval($_GET['id']);
 		// $id = $_GET['id'];
 
+		// $sql = "update tblproduk set Kategori=:kategori,Deskripsi=:deskripsi,Harga=:harga,Penjualan=:penjualan where id=:id";
 		$sql = "update tblproduk set Namaproduk=:namaproduk,Kategori=:kategori,Deskripsi=:deskripsi,Harga=:harga,Penjualan=:penjualan where id=:id";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':namaproduk', $namaproduk, PDO::PARAM_STR);
@@ -115,9 +116,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 													<form method="post" class="form-horizontal" enctype="multipart/form-data">
 														<div class="form-group">
-															<label class="col-sm-2 control-label">Nama Produk<span style="color:red">*</span></label>
+															<label class="col-sm-2 control-label">Jenis Produk<span></span></label>
+															<!-- <label class="col-sm-2 control-label">Nama Produk<span style="color:red">*</span></label> -->
 															<div class="col-sm-4">
-																<input type="text" name="namaproduk" class="form-control" value="<?php echo htmlentities($result->Namaproduk) ?>" required>
+																<input type="text" name="namaproduk" class="form-control" value="<?php echo htmlentities($result->Namaproduk) ?>">
 															</div>
 															<label class="col-sm-2 control-label">Kategori<span style="color:red">*</span></label>
 															<div class="col-sm-4">
@@ -148,9 +150,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 															<label class="col-sm-2 control-label">Deskripsi<span style="color:red">*</span></label>
 															<div class="col-sm-10">
 																<textarea class="form-control" name="deskrip" rows="3" required><?php echo htmlentities($result->Deskripsi); ?></textarea>
+																<br><br>
 															</div>
 														</div>
-
 														<div class="form-group">
 															<label class="col-sm-2 control-label">Harga<span style="color:red">*</span></label>
 															<div class="col-sm-4">
@@ -295,7 +297,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 						<div class="form-group">
 							<div class="col-sm-8 col-sm-offset-2">
 
-								<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save changes</button>
+								<button class="btn btn-primary" name="submit" type="submit" style="margin-top:4%">Save </button>
 							</div>
 						</div>
 						<!-- <div class="row">

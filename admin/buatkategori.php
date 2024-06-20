@@ -79,7 +79,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 			<?php include('includes/leftbar.php'); ?>
 			<div class="content-wrapper">
 				<div class="container-fluid">
-
 					<div class="row">
 						<div class="col-md-12">
 
@@ -95,7 +94,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 												<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong></strong><?php echo htmlentities($msg); ?> </div><?php } ?>
 												<div class="form-group">
-													<label class="col-sm-4 control-label">Nama Kategori</label>
+													<label class="col-sm-4 control-label">Kategori</label>
 													<div class="col-sm-8">
 														<input type="text" class="form-control" name="brand" id="brand" required>
 													</div>

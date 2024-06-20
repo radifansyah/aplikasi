@@ -109,7 +109,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2>Semua Order</h2>
+							<h2>Order</h2>
 
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">
@@ -120,7 +120,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<tr>
 												<th>No</th>
 												<th>Nama User</th>
-												<th>Kategori/Produk</th>
+												<th>Kategori</th>
 												<th>Dari Tanggal</th>
 												<th>Sampai Tanggal</th>
 												<th>Pesan</th>
@@ -146,20 +146,21 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<tr>
 														<td><?php echo htmlentities($cnt); ?></td>
 														<td><?php echo htmlentities($result->Namalengkap); ?></td>
-														<td><?php echo htmlentities($result->namaKategori); ?> / <?php echo htmlentities($result->Namaproduk); ?></td>
+														<td><?php echo htmlentities($result->namaKategori); ?> </td>
+														<!-- <td><?php echo htmlentities($result->namaKategori); ?> / <?php echo htmlentities($result->Namaproduk); ?></td> -->
 														<td><?php echo htmlentities($result->Daritanggal); ?></td>
 														<td><?php echo htmlentities($result->Sampaitanggal); ?></td>
 														<td><?php echo htmlentities($result->Pesan); ?></td>
 														<td><?php
-															if ($result->Status == 0) {
-																// echo htmlentities('Not Confirmed yet');
-																echo htmlentities('belum di konfirmasi');
-															} else if ($result->Status == 1) {
-																echo htmlentities('di konfirmasi');
-															} else {
-																echo htmlentities('di batalkan');
-															}
-															?></td>
+																if ($result->Status == 0) {
+																	// echo htmlentities('Not Confirmed yet');
+																	echo htmlentities('belum di konfirmasi');
+																} else if ($result->Status == 1) {
+																	echo htmlentities('di konfirmasi');
+																} else {
+																	echo htmlentities('di batalkan');
+																}
+																?></td>
 														<td><?php echo htmlentities($result->Tanggalkirim); ?></td>
 														<td><a class="btn-primary" href="booking.php?aeid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda yakin ingin mengkonfirmasi pemesanan ini ?')"> Confirm</a>
 

@@ -107,7 +107,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												?>
 
 														<div class="form-group">
-															<label class="col-sm-4 control-label">Brand Name</label>
+															<label class="col-sm-4 control-label">Kategori</label>
 															<div class="col-sm-8">
 																<input type="text" class="form-control" value="<?php echo htmlentities($result->namaKategori); ?>" name="brand" id="brand" required>
 															</div>

@@ -56,7 +56,9 @@ if (isset($_POST['signup'])) {
 
     // Memastikan kedua kolom password tidak kosong
     if (password === '' || confirmPassword === '') {
-      alert("Password and Confirm Password cannot be empty!");
+      alert("Kata Sandi dan Konfirmasi Kata Sandi tidak boleh kosong!");
+
+
       return false;
     }
 
@@ -111,20 +113,20 @@ if (isset($_POST['signup'])) {
             <div class="col-md-12 col-sm-6">
               <form method="post" name="signup" onsubmit="return validateForm()">
                 <div class="form-group">
-                  <input type="text" class="form-control" name="fullname" placeholder="Masukkan Nama Lengkap " required="required">
+                  <input type="text" class="form-control" name="fullname" placeholder="Masukkan Nama Lengkap* " required="required">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="mobileno" placeholder="Masukkan No. Telpon " maxlength="15" required="required">
+                  <input type="text" class="form-control" name="mobileno" placeholder="Masukkan No. Telpon* " maxlength="15" required="required">
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="emailid" id="emailid" onBlur="checkAvailability()" placeholder="Masukkan Email " required="required">
+                  <input type="email" class="form-control" name="emailid" id="emailid" onBlur="checkAvailability()" placeholder="Masukkan Email* " required="required">
                   <span id="user-availability-status" style="font-size:12px;"></span>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Masukkan Password " required="required">
+                  <input type="password" class="form-control" name="password" placeholder="Masukkan Password Baru* " required="required">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="confirmpassword" placeholder="Konfirmasi Password " required="required">
+                  <input type="password" class="form-control" name="confirmpassword" placeholder="Konfirmasi Password Baru* " required="required">
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="terms_agree" required="required" checked="">

@@ -89,7 +89,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 					<div class="row">
 						<div class="col-md-12">
 
-							<h2>Semua User</h2>
+							<h2>User</h2>
 
 							<!-- Zero Configuration Table -->
 							<div class="panel panel-default">

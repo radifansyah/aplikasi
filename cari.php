@@ -34,7 +34,7 @@ error_reporting(0);
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
@@ -49,7 +49,7 @@ error_reporting(0);
   <!-- /Header -->
 
   <!--Page Header-->
-  <section class="page-header listing_page" style="background-image: url(assets/images/b.jpeg);">
+  <section class="page-header listing_page" style="background-image: url(assets/images/headerku.png);">
     <div class="container">
       <div class="page-header_wrap">
         <div class="page-heading">
@@ -104,10 +104,12 @@ error_reporting(0);
                 <div class="product-listing-img"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="Image" /> </a>
                 </div>
                 <div class="product-listing-content">
-                  <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a></h5>
+                  <!-- <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> </a></h5> -->
+                  <h5><a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> <?php echo htmlentities($result->Namaproduk); ?></a></h5>
                   <p class="list-price">Rp. <?php echo htmlentities($result->Harga); ?></p>
                   <ul>
-                    <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Penjualan); ?></li>
+                    <li><?php echo htmlentities($result->Penjualan); ?></li>
+                    <!-- <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->Penjualan); ?></li> -->
                   </ul>
                   <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>" class="btn">Lihat Detail <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
                 </div>
@@ -126,7 +128,7 @@ error_reporting(0);
               <form action="cari.php" method="post">
                 <div class="form-group select">
                   <select class="form-control" name="brand">
-                    <!-- <option>Pilih</option> -->
+                    <option>Pilih</option>
                     <label for="">Cari</label>
 
                     <?php $sql = "SELECT * from  tblkategori ";
@@ -174,7 +176,7 @@ error_reporting(0);
 
                     <li class="gray-bg">
                       <div class="recent_post_img"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
-                      <div class="recent_post_title"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> , <?php echo htmlentities($result->Namaproduk); ?></a>
+                      <div class="recent_post_title"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->namaKategori); ?> <?php echo htmlentities($result->Namaproduk); ?></a>
                         <p class="widget_price">Rp. <?php echo htmlentities($result->Harga); ?></p>
                       </div>
                     </li>
@@ -222,6 +224,8 @@ error_reporting(0);
   <!--Slider-JS-->
   <script src="assets/js/slick.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="https://kit.fontawesome.com/59dcbb9722.js" crossorigin="anonymous"></script>
+
 
 </body>
 

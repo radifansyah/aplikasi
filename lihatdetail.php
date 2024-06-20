@@ -50,6 +50,8 @@ if (isset($_POST['submit'])) {
   <link href="assets/css/slick.css" rel="stylesheet">
   <!--bootstrap-slider -->
   <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
   <!--FontAwesome Font Style -->
   <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
@@ -57,7 +59,7 @@ if (isset($_POST['submit'])) {
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 
@@ -114,7 +116,8 @@ if (isset($_POST['submit'])) {
         <div class="container">
           <div class="listing_detail_head row">
             <div class="col-md-6">
-              <h3><?php echo htmlentities($result->namaKategori); ?>,<?php echo htmlentities($result->Namaproduk); ?></h3>
+              <!-- <h3><?php echo htmlentities($result->namaKategori); ?></h3> -->
+              <h5><?php echo htmlentities($result->namaKategori); ?> <?php echo htmlentities($result->Namaproduk); ?></h5>
             </div>
             <div class="col-md-5">
               <div class="price_info">
@@ -128,8 +131,11 @@ if (isset($_POST['submit'])) {
               <div class="main_features">
                 <ul>
 
-                  <li> <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <li>
                     <h5><?php echo htmlentities($result->Penjualan); ?></h5>
+
+                    </i>
+                    <!-- <li> <i class="fa fa-calendar" aria-hidden="true"></i> -->
                   </li>
                   <!-- <li> <i class="fa fa-cogs" aria-hidden="true"></i>
                     <h5><?php echo htmlentities($result->FuelType); ?></h5>
@@ -157,7 +163,8 @@ if (isset($_POST['submit'])) {
                     <!-- vehicle-overview -->
                     <div role="tabpanel" class="tab-pane active" id="vehicle-overview">
 
-                      <p><?php echo htmlentities($result->Deskripsi); ?></p>
+                      <p><?php echo ($result->Deskripsi); ?></p>
+                      <!-- <p><?php echo htmlentities($result->Deskripsi); ?></p> -->
                     </div>
 
 
@@ -203,13 +210,13 @@ if (isset($_POST['submit'])) {
                     <label style="font-size: 12px; color: red;" for="">⚠️Jika Melakukan Pembelian Produk Hanya Memasukkan
                       Tanggal Pembelian, Dan Jika Melakukan Penyewaan Produk Silahkan Memasukkan Tanggal
                       Penyewaan
-                      Dan Tanggal Pengembalian</label>
-                    <label style="font-size: 12px;" for=""> Tanggal Pembelian/Penyewaan Produk</label>
+                      Dan Tanggal Pengembalian Penyewaan Produk</label>
+                    <label style="font-size: 12px;" for=""> Tanggal Pembelian/Penyewaan Produk *</label>
                     <!-- <input type="date" class="form-control" name="daritanggal" placeholder="" required> -->
                     <input type="date" class="form-control" name="daritanggal" id="daritanggal" placeholder="" required>
                   </div>
                   <div class="form-group">
-                    <label style="font-size: 13px;" for=""> Tanggal Pengembalian Produk</label>
+                    <label style="font-size: 12px;" for=""> Tanggal Pengembalian Penyewaan Produk *</label>
                     <input type="date" class="form-control" name="sampaitanggal" placeholder="">
                   </div>
                   <div class="form-group">
@@ -320,6 +327,8 @@ if (isset($_POST['submit'])) {
           }
         }
       </script>
+      <script src="https://kit.fontawesome.com/59dcbb9722.js" crossorigin="anonymous"></script>
+
 
 </body>
 

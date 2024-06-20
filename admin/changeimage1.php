@@ -16,8 +16,25 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':id', $id, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Image updated successfully";
+		$msg = "Gambar Berhasil diubah";
+
+
+		// $_SESSION['msg'] = "Gambar Berhasil diubah";
+		// header('Location: editproduk.php?imgid=' . $id); // redirect setelah update
+		// exit();
 	}
+	// if (isset($_POST['update'])) {
+	// 	$vimage1 = $_FILES["img1"]["name"];
+	// 	$id = intval($_GET['imgid']);
+	// 	move_uploaded_file($_FILES["img1"]["tmp_name"], "img/produk/" . $_FILES["img1"]["name"]);
+	// 	$sql = "update tblproduk set Vimage1=:vimage1 where id=:id";
+	// 	$query = $dbh->prepare($sql);
+	// 	$query->bindParam(':vimage1', $vimage1, PDO::PARAM_STR);
+	// 	$query->bindParam(':id', $id, PDO::PARAM_STR);
+	// 	$query->execute();
+
+	// 	$msg = "Gambar Berhasil diubah";
+	// }
 ?>
 
 	<!doctype html>
@@ -131,6 +148,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 													<div class="col-sm-8 col-sm-offset-4">
 
 														<button class="btn btn-primary" name="update" type="submit">Update</button>
+														<button class="btn btn-default" type="button" onclick="history.back();">Kembali</button>
 													</div>
 												</div>
 

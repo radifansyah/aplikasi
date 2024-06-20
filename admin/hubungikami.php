@@ -14,7 +14,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$query->bindParam(':eid', $eid, PDO::PARAM_STR);
 		$query->execute();
 
-		$msg = "Testimonial Successfully Inacrive";
+		$msg = "Pesan telah di baca";
 	}
 	if (isset($_GET['del'])) {
 		$id = $_GET['del'];
@@ -128,11 +128,12 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><?php echo htmlentities($result->Pesan); ?></td>
 														<td><?php echo htmlentities($result->Tanggalkirim); ?></td>
 														<?php if ($result->Status == 1) {
-														?><td><a href="" class=" btn-primary">Read</a> <a class=" btn-primary" href="hubungikami.php?del=<?php echo $result->id; ?>" onclick="return confirm('apakah ingin hapus data ?');"></i> Delete</a></td>
+														?><td><a href="" class=" btn-primary">Read</a> <a class=" btn-primary" href="hubungikami.php?del=<?php echo $result->id; ?>" onclick="return confirm('apakah ingin hapus data?');"></i> Delete</a></td>
+															<!-- ?><td><a href="" class=" btn-primary">Read</a> <a class=" btn-primary" href="hubungikami.php?del=<?php echo $result->id; ?>" onclick="return confirm('apakah ingin hapus data ?');"></i> Delete</a></td> -->
 															<!-- <td> </td> -->
 														<?php } else { ?>
 
-															<td><a class=" btn-primary" href="hubungikami.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Do you really want to read')">Pending<a class=" btn-primary" href="hubungikami.php?del=<?php echo $result->id; ?>" onclick="return confirm('apakah ingin hapus data ?');"></i> Delete</a></a>
+															<td><a class=" btn-primary" href="hubungikami.php?eid=<?php echo htmlentities($result->id); ?>" onclick="return confirm('Apakah Anda ingin membaca pesan?')">Pending<a class=" btn-primary" style="margin-left: 7px;" href="hubungikami.php?del=<?php echo $result->id; ?>" onclick="return confirm('apakah ingin hapus data ?');"></i>Delete</a></a>
 															</td>
 															<!-- <td> </td> -->
 														<?php } ?>

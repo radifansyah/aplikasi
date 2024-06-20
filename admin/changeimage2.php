@@ -5,7 +5,6 @@ include('includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
 	header('location:index.php');
 } else {
-	// Code for change password
 	if (isset($_POST['update'])) {
 		$vimage = $_FILES["img2"]["name"];
 		$id = intval($_GET['imgid']);
@@ -68,8 +67,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 				box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 			}
 		</style>
-
-
 	</head>
 
 	<body>
@@ -91,10 +88,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<div class="panel-body">
 											<form method="post" class="form-horizontal" enctype="multipart/form-data">
 
-
-												<?php if ($error) { ?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } else if ($msg) { ?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php } ?>
-
-
+												<?php if ($error) { ?>
+													<div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div>
+												<?php } else if ($msg) { ?>
+													<div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div>
+												<?php } ?>
 
 												<div class="form-group">
 													<label class="col-sm-4 control-label">Gambar Saat ini</label>
@@ -105,9 +103,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 													$query->bindParam(':id', $id, PDO::PARAM_STR);
 													$query->execute();
 													$results = $query->fetchAll(PDO::FETCH_OBJ);
-													$cnt = 1;
 													if ($query->rowCount() > 0) {
-														foreach ($results as $result) {	?>
+														foreach ($results as $result) { ?>
 
 															<div class="col-sm-8">
 																<img src="img/produk/<?php echo htmlentities($result->Vimage2); ?>" width="300" height="200" style="border:solid 1px #000">
@@ -124,13 +121,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 												</div>
 												<div class="hr-dashed"></div>
 
-
-
-
 												<div class="form-group">
 													<div class="col-sm-8 col-sm-offset-4">
-
 														<button class="btn btn-primary" name="update" type="submit">Update</button>
+														<button class="btn btn-default" type="button" onclick="history.back();">Kembali</button>
 													</div>
 												</div>
 
@@ -142,11 +136,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 							</div>
 
-
-
 						</div>
 					</div>
-
 
 				</div>
 			</div>

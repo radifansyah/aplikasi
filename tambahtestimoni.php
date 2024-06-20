@@ -16,7 +16,7 @@ if (strlen($_SESSION['login']) == 0) {
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId) {
-      $msg = "Testimonail submitted successfully";
+      $msg = "Testimoni Berhasil di Kirim";
     } else {
       $error = "Something went wrong. Please try again";
     }
@@ -50,7 +50,7 @@ if (strlen($_SESSION['login']) == 0) {
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
+    <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <style>
       .errorWrap {
@@ -83,7 +83,7 @@ if (strlen($_SESSION['login']) == 0) {
     <?php include('includes/header.php'); ?>
     <!-- /Header -->
     <!--Page Header-->
-    <section class="page-header profile_page" style="background-image: url(assets/images/b.jpeg);">
+    <section class="page-header profile_page" style="background-image: url(assets/images/headerku.png);">
       <div class="container">
         <div class="page-header_wrap">
           <div class="page-heading">

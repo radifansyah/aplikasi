@@ -34,7 +34,7 @@ include('includes/config.php');
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/images/favicon-icon/24x24.png">
+    <link rel="shortcut icon" href="assets/images/favicon-icon/icon.jpg">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <style>
         .errorWrap {
@@ -68,7 +68,7 @@ include('includes/config.php');
     <!-- /Header -->
 
     <!--Page Header-->
-    <section class="page-header contactus_page" style="background-image: url(assets/images/b.jpeg);">
+    <section class="page-header contactus_page" style="background-image: url(assets/images/headerku.png);">
         <div class="container">
             <div class="page-header_wrap">
                 <div class="page-heading">
@@ -90,13 +90,13 @@ include('includes/config.php');
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>Cara Buat Akun ?</h5>
+                    <h6>Cara Buat Akun ?</h6>
                     <ol type="1">
-                        <li>Klik Tombol Login/Register</a></li>
+                        <li>Klik Tombol Login/Daftar</a></li>
                         <li>Klik Daftar</a></li>
-                        <li>Kemudian Masukkan Nama Lengkap, No.Telpon, Email, dan Password</a></li>
+                        <li>Kemudian Masukkan Nama Lengkap, No.Telpon, Email, dan Password Baru Anda</a></li>
                     </ol>
-                    <h5>Cara Melakukan Transaksi Pembelian/Penyewaan Produk ?</h5>
+                    <h6>Cara Melakukan Transaksi Pembelian/Penyewaan Produk ?</h6>
                     <ol type="1">
                         <li>Login Terlebih Dahulu Jika Belum Mempunyai Akun Silahkan Daftar </a></li>
                         <li>Klik Menu Produk</a></li>
@@ -105,9 +105,9 @@ include('includes/config.php');
                         <!-- <i class="fa-brands fa-tiktok fa-bounce"></i> -->
                         <li>
                             Klik Tombol Lihat Detail</a></li>
-                        <li>Jika Melakukan Pembelian Produk Hanya Memasukkan Tanggal Pembelian, Dan Jika Melakukan Penyewaan Produk Silahkan Memasukkan Tanggal Penyewaan Dan Tanggal Pengembalian</li>
+                        <li>Jika Melakukan Pembelian Produk Hanya Memasukkan Tanggal Pembelian, Dan Jika Melakukan Penyewaan Produk Silahkan Memasukkan Tanggal Penyewaan Dan Tanggal Pengembalian Penyewaan</li>
                         <li>Klik Tombol Pesan Sekarang</li>
-                        <li>Klik Nama Anda Di Bagian Menu Untuk Melihat Pesanan Anda Apakah Di Konfirmasi Atau Belum Dan Silahkan Klik Menu Tambah Testimoni Untuk Memberikan Ulasan Tentang Toko Azha Seserahan Palopo
+                        <li>Klik Nama Anda Di Bagian Menu Untuk Melihat Pesanan Anda, Jika Ingin Membatalkan Pesanan Silahkan Hubungi No Telpon 08135622001 Dan Silahkan Klik Menu Tambah Testimoni Untuk Memberikan Ulasan Tentang Produk Toko Azha Seserahan Palopo
                         </li>
                     </ol>
 
