@@ -87,7 +87,7 @@ error_reporting(0);
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="resentnewcar">
 
-            <?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Penjualan,tblproduk.Deskripsi,tblproduk.id,tblproduk.Vimage1 from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori";
+            <?php $sql = "SELECT tblproduk.Namaproduk,tblkategori.namaKategori,tblproduk.Harga,tblproduk.Penjualan,tblproduk.Deskripsi,tblproduk.id,tblproduk.Vimage1 from tblproduk join tblkategori on tblkategori.id=tblproduk.Kategori order by  id desc limit 9";
             $query = $dbh->prepare($sql);
             $query->execute();
             $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -98,7 +98,7 @@ error_reporting(0);
 
                 <div class="col-list-3">
                   <div class="recent-car-list">
-                    <div class="car-info-box"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image"></a>
+                    <div class="car-info-box"> <a href="lihatdetail.php?vhid=<?php echo htmlentities($result->id); ?>"><img style="height: 400px; width: 500px;" src="admin/img/produk/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image"></a>
                       <ul>
                         <li>
                           <!-- <li><i class="fa fa-calendar" aria-hidden="true"></i> -->
@@ -118,7 +118,6 @@ error_reporting(0);
                 </div>
             <?php }
             } ?>
-
           </div>
         </div>
       </div>
@@ -179,7 +178,7 @@ error_reporting(0);
         <div id="testimonial-slider">
           <?php
           $tid = 1;
-          $sql = "SELECT tbltestimonial.Testimoni,tbluser.Namalengkap from tbltestimonial join tbluser on tbltestimonial.Email=tbluser.Email where tbltestimonial.Status=:tid";
+          $sql = "SELECT tbltestimonial.Testimoni,tbluser.Namalengkap from tbltestimonial join tbluser on tbltestimonial.Email=tbluser.Email where tbltestimonial.Status=:tid ";
           $query = $dbh->prepare($sql);
           $query->bindParam(':tid', $tid, PDO::PARAM_STR);
           $query->execute();
